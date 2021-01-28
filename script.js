@@ -21,8 +21,30 @@ mymap.on('click', onMapClick);
 
 //L.geoJSON(localidades).addTo(mymap);
 
+function style(feature) {
+  return {
+      fillColor: '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6),
+      weight: 2,
+      opacity: 1,
+      color: 'white',
+      dashArray: '3',
+      fillOpacity: 0.7
+  };
+}
+
 var layerGroup = L.geoJSON(localidades, {
+    style: style,
+    pointToLayer: function(feature, latlng) {
+      return new L.CircleMarker(latlng, {
+        radius: 15,
+        color: '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6)
+      });
+    },
     onEachFeature: function (feature, layer) {
-      layer.bindPopup('<h1>'+feature.properties.SIGLA_UF+'</h1><p>UF: '+feature.properties.NM_UF+'</p>');
+      if ("Área" in feature.properties) {
+        layer.bindPopup('<h1>Área</h1><p>UF: '+feature.properties["Área"]+'</p>');
+      } else if ("Cidade" in feature.properties) {
+        layer.bindPopup('<h1>'+feature.properties["Cidade"]+'</h1><br><h1>'+(feature.properties["Estado"] != null ? feature.properties["Estado"] : '-')+'</h1>');
+      }
     }
   }).addTo(mymap);
