@@ -1,4 +1,4 @@
-var mymap = L.map('mapid').setView([-16.073967819928836, -54.082029461860664], 5);
+var mymap = L.map('mapid').setView([24.367113562651276, 13.359375000000002], 3);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
@@ -11,9 +11,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 var popup = L.popup();
 
 function onMapClick(e) {
+    lat = e.latlng.lat.toFixed(6);
+    lng = e.latlng.lng.toFixed(6);
     popup
         .setLatLng(e.latlng)
-        .setContent("Você clicou nas coordenadas " + e.latlng.toString())
+        .setContent("Coordenada:<br><br><b>Latitude</b>:" + lat + "<br><b>Longitude</b>: " + lng)
         .openOn(mymap);
 }
 
@@ -42,9 +44,36 @@ var layerGroup = L.geoJSON(localidades, {
     },
     onEachFeature: function (feature, layer) {
       if ("Área" in feature.properties) {
-        layer.bindPopup('<h1>Área</h1><p>UF: '+feature.properties["Área"]+'</p>');
+        nomes = feature.properties['Nomes'].split(",");
+        num_alunos = nomes.length;
+        if (nomes[0] == "") {
+          num_alunos = 0; 
+        }
+        str = '<h1>'+feature.properties["Área"]+'</h1><h3>Alunos ('+num_alunos+'):</h3>';
+        if (num_alunos > 0) {
+          for (index in nomes) {
+            nome = nomes[index].split(";")[0];
+            titulo = nomes[index].split(";")[1];
+            repositorio = nomes[index].split(";")[2];
+            str += '<p><b>Aluno:</b><br>'+nome+' <br><b>Título do trabalho:</b><br> '+titulo+'<br><a href="'+repositorio+'" target="_blank">[Link do trabalho]</a></p>';
+          }
+        }
+        layer.bindPopup(str);
       } else if ("Cidade" in feature.properties) {
-        layer.bindPopup('<h1>'+feature.properties["Cidade"]+'</h1><br><h1>'+(feature.properties["Estado"] != null ? feature.properties["Estado"] : '-')+'</h1>');
+        nomes = feature.properties['Nomes'].split(",");
+        num_alunos = nomes.length;
+        if (nomes[0] == "") {
+          num_alunos = 0; 
+        }
+        str = '<h1>'+feature.properties["Cidade"]+'/'+(feature.properties["Estado"] != null ? feature.properties["Estado"] : '-')+'</h1><h3>Alunos ('+num_alunos+'):</h3>';
+        if (num_alunos > 0) {
+          for (index in nomes) {
+            nome = nomes[index].split(";")[0];
+            repositorio = nomes[index].split(";")[1];
+            str += '<p>'+nome+' <a href="'+repositorio+'" target="_blank">[Link do trabalho]</a></p>';
+          }
+        }
+        layer.bindPopup(str);
       }
     }
   }).addTo(mymap);
