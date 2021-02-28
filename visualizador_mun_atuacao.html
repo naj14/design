@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Radar dos egressos - PPG-AMSA UFMG</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <style>    
+    .leaflet-popup {
+        position: absolute;
+        text-align: center;
+        }
+    
+    .leaflet-popup-content {
+        margin-top: 20px;
+        margin-right: 2px;
+        padding-right: 12px;
+        min-width: 200 px !important;
+        max-height: 350px;
+        overflow: auto;
+        }
+    </style>
+</head>
+
+<body style="height:70vh;">
+	<div style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'">
+	<h2><a href="https://csr.ufmg.br/ppgamsa/" target="_blank">Programa de Pós-Graduação em Análise e Modelagem de Sistemas Ambientais</a></h2>
+<p>Instituto de Geociências | Universidade Federal de Minas Gerais</p>
+	<h3> Radar dos Egressos  - Município de Nascimento dos Alunos</h3>
+	</div>
+    <div id="mapid" style="width: 100vw; height: 100vh;"></div>
+    <script type="text/javascript" src="municipios_atuacao.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
