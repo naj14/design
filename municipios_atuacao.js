@@ -1,5 +1,4 @@
-var localidades =
-{
+var localidades = {
 "type": "FeatureCollection",
 "name": "area_atuacao",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
@@ -26,6 +25,13 @@ var localidades =
 { "type": "Feature", "properties": { "fid": 63, "Cidade": "Porto Alegre", "Estado": "RS", "País": "Brasil", "Nomes": "JOSÉ NUNES DE AQUINO;https:\/\/repositorio.ufmg.br\/handle\/1843\/IGCM-AX9NNF" }, "geometry": { "type": "Point", "coordinates": [ -51.164436147337717, -30.095261925695162 ] } },
 { "type": "Feature", "properties": { "fid": 64, "Cidade": "Rio Branco", "Estado": "AC", "País": "Brasil", "Nomes": "ELAINE LOPES DA COSTA;https:\/\/repositorio.ufmg.br\/handle\/1843\/IGCM-AV4NCJ" }, "geometry": { "type": "Point", "coordinates": [ -68.371080288551155, -10.066140094016948 ] } },
 { "type": "Feature", "properties": { "fid": 66, "Cidade": "Uberaba", "Estado": "MG", "País": "Brasil", "Nomes": "MAYTÊ MARIA ABREU PIRES DE MELO SILVA;https:\/\/repositorio.ufmg.br\/handle\/1843\/IGCM-9MPPJE" }, "geometry": { "type": "Point", "coordinates": [ -47.937849472109534, -19.755606911950231 ] } },
-{ "type": "Feature", "properties": { "fid": 67, "Cidade": "Viçosa", "Estado": "MG", "País": "Brasil", "Nomes": "JULIANA FERREIRA LORENTZ;https:\/\/repositorio.ufmg.br\/handle\/1843\/MPBB-8MRJVM" }, "geometry": { "type": "Point", "coordinates": [ -42.88551271332426, -20.740420000937082 ] } }
+{ "type": "Feature", "properties": { "fid": 67, "Cidade": "Viçosa", "Estado": "MG", "País": "Brasil", "Nomes": "JULIANA FERREIRA LORENTZ;https:\/\/repositorio.ufmg.br\/handle\/1843\/MPBB-8MRJVM" }, "geometry": { "type": "Point", "coordinates": [ -42.88551271332426, -20.740420000937082 ] } },
+{ "type": "Feature", "properties": { "fid": 68, "Cidade": "Bonn", "Estado": null, "País": "Alemanha", "Nomes": "TREVOR RAY TISLER;https:\/\/repositorio.ufmg.br\/handle\/1843\/31621" }, "geometry": { "type": "Point", "coordinates": [ 7.157804904549613, 50.704362812596933 ] } },
+{ "type": "Feature", "properties": { "fid": 69, "Cidade": "Berlim", "Estado": null, "País": "Alemanha", "Nomes": "LETÍCIA DE BARROS VIANA HISSA;#" }, "geometry": { "type": "Point", "coordinates": [ 13.397240072964907, 52.498989684351002 ] } },
+{ "type": "Feature", "properties": { "fid": 70, "Cidade": "Queensland", "Estado": null, "País": "Brasil", "Nomes": "MARINA SCARPELLI DRUMMOND DE ALMEIDA;#" }, "geometry": { "type": "Point", "coordinates": [ 153.081047494636096, -27.468408652521326 ] } },
+{ "type": "Feature", "properties": { "fid": 71, "Cidade": "Beira", "Estado": null, "País": "Moçambique", "Nomes": "CASTIGO DAVID AUGUSTO MACHAVA;https:\/\/repositorio.ufmg.br\/handle\/1843\/33558" }, "geometry": { "type": "Point", "coordinates": [ 34.857965063989049, -19.80981687551046 ] } },
+{ "type": "Feature", "properties": { "fid": 72, "Cidade": "República Tcheca", "Estado": null, "País": "República Tcheca", "Nomes": "ÍTALO SOUSA DE SENA;#" }, "geometry": { "type": "Point", "coordinates": [ 14.372407118704652, 50.042719900271074 ] } },
+{ "type": "Feature", "properties": { "fid": 73, "Cidade": "County Kildare", "Estado": null, "País": "Irlanda", "Nomes": "SANDRA CRISTINA DEODORO;https:\/\/repositorio.ufmg.br\/handle\/1843\/34379" }, "geometry": { "type": "Point", "coordinates": [ -6.906657615449276, 53.166276992536957 ] } },
+{ "type": "Feature", "properties": { "fid": 74, "Cidade": "Coimbra", "Estado": null, "País": "Portugal", "Nomes": "ESPERANÇA DE LACERDA PEIXOTO;#" }, "geometry": { "type": "Point", "coordinates": [ -8.408729637877402, 40.198263043622831 ] } }
 ]
 }
