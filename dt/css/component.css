@@ -260,10 +260,9 @@ span.nav-close:before {
 	/* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
 	.grid li {
 		width: 33.3%;
-		
 	}
 	.grid-gallery figcaption h3 {
-		font-size: 18px;
+		font-size: 20px;
 	}
 	.grid-gallery figcaption p {
 		font-size: 13px;
