@@ -64,7 +64,6 @@
 .grid figcaption {
 	background: #F0EFEC;
 	padding: 25px;
-	font-size-adjust: auto;  
 }
 	
 
@@ -160,7 +159,7 @@
 }
 
 .slideshow figcaption h3 {
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 200%;
 }
 
